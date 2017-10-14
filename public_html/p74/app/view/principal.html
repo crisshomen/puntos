@@ -1,0 +1,26 @@
+<div class="container" style="margin-top: 40px">
+   <form ng-submit="procesar()">
+      <div class="form-group">
+         <label for="genero">Género biológico</label>
+         <select ng-model="data.genero" id="genero" class="form-control" required>
+            <option value="">Seleccione su género biológico</option>
+            <option value="h">Hombre</option>
+            <option value="m">Mujer</option>
+         </select>
+      </div>
+      <div class="form-group">
+         <label for="edad">Edad</label>
+         <input ng-model="data.edad" class="form-control" type="number" id="edad" required placeholder="Digite su edad">
+      </div>
+      <div class="form-group">
+         <label for="estado">Estado civil</label>
+         <input ng-model="data.estado" class="form-control" type="text" id="estado" required placeholder="Digite su estado civil">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Procesar</button>
+      <button type="reset" ng-click="restablecer()" class="btn btn-default btn-block">Restablecer</button>
+   </form>
+   <br>
+   <div ng-show="showInfo" class="alert alert-info">
+      {{mensaje}}
+   </div>
+</div>
